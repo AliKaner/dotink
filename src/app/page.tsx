@@ -77,21 +77,17 @@ export default function Home() {
         {/* Output Section */}
         <div className="flex flex-col gap-6">
           
-          {/* Validation Result */}
-          {result && (
-            <div className={`p-4 rounded-xl border shadow-lg \${result.errors.length > 0 ? 'bg-rose-950/30 border-rose-900' : 'bg-teal-950/30 border-teal-900'}`}>
-              <h2 className={`text-lg font-bold mb-2 \${result.errors.length > 0 ? 'text-rose-400' : 'text-teal-400'}`}>
-                {result.errors.length > 0 ? 'Validation Errors' : 'Success! Valid INK Format'}
+          {/* Validation Errors */}
+          {result && result.errors.length > 0 && (
+            <div className="p-4 rounded-xl border shadow-lg bg-rose-950/30 border-rose-900">
+              <h2 className="text-lg font-bold mb-2 text-rose-400">
+                Validation Errors
               </h2>
-              {result.errors.length > 0 ? (
-                <ul className="list-disc list-inside text-rose-300 space-y-1 text-sm">
-                  {result.errors.map((err, i) => (
-                    <li key={i}>{err}</li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-teal-300 text-sm">The document strictly follows the INK FORMAT v1.0 specification.</p>
-              )}
+              <ul className="list-disc list-inside text-rose-300 space-y-1 text-sm">
+                {result.errors.map((err, i) => (
+                  <li key={i}>{err}</li>
+                ))}
+              </ul>
             </div>
           )}
 
