@@ -1,5 +1,5 @@
 {
-  "name": "dotink",
+  "name": "@alikaner/dotink",
   "version": "0.1.0",
   "description": "Strict plain-text INK format lexer, parser, and AST generator.",
   "main": "dist/index.js",
