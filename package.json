@@ -1,12 +1,19 @@
 {
   "name": "dotink",
   "version": "0.1.0",
-  "private": true,
+  "description": "Strict plain-text INK format lexer, parser, and AST generator.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint",
+    "build:pkg": "tsc -p tsconfig.pkg.json",
+    "prepublishOnly": "npm run build:pkg"
   },
   "dependencies": {
     "next": "16.1.6",
