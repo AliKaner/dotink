@@ -2,6 +2,9 @@
 
 A parser, lexer, and live documentation playground for the **INK FORMAT v1.0** specification.
 
+## What is INK?
+INK is a strict, plain-text markup language designed specifically for writers, novelists, and storytellers who want to focus on their narrative without the clutter of complex formatting like HTML or Markdown. It enforces a clean, readable structure with built-in support for literary concepts like chapters, scenes, character thoughts, flashbacks, and revision tracking. By using INK, writers ensure their manuscripts are perfectly formatted, purely structural, and easily parsable by machines for analysis, conversion, or publishing.
+
 ## Features
 - **NPM Package Built-In**: Install via `npm i @alikaner/dotink` and use the strongly typed methods directly in any Node/TS project.
 - **Strict Parsing**: Enforces rules like maximum 120 characters per line, mandatory headers (`@BOOK`, `@REVISION`), and no HTML.
