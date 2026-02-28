@@ -3,9 +3,29 @@
 A parser, lexer, and live documentation playground for the **INK FORMAT v1.0** specification.
 
 ## Features
+- **NPM Package Built-In**: Install via `npm i @alikaner/dotink` and use the strongly typed methods directly in any Node/TS project.
 - **Strict Parsing**: Enforces rules like maximum 120 characters per line, mandatory headers (`@BOOK`, `@REVISION`), and no HTML.
 - **AST Generation**: Converts raw `.ink` files into a strongly typed Abstract Syntax Tree (AST).
+- **Ink Exporter**: Convert your generated JSON AST objects strictly back into stringified `.ink` files.
 - **Interactive Playground**: A Next.js web application to test `.ink` files in real-time.
+
+## Installation
+
+```bash
+npm install @alikaner/dotink
+```
+
+### Usage
+
+```typescript
+import { parseInk, jsonToInk, InkBook } from '@alikaner/dotink';
+
+// String to AST
+const { ast, errors } = parseInk('@BOOK\\nTITLE: Hello\\n...');
+
+// AST to String
+const { result, errors: exportErrors } = jsonToInk(ast);
+```
 
 ## The `.ink` Format Specification
 
